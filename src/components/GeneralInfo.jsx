@@ -28,7 +28,9 @@ function GeneralInfo() {
         );
     }
     return (
-        <div className="general-info">
+        <div className="general-form">
+            <h1 className="general-header">General Info</h1>
+
             <form
                 onSubmit={(e) => {
                     e.preventDefault();

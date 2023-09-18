@@ -1,29 +1,27 @@
 import { useState } from "react";
-import "../styles/Education.css";
+import "../styles/Experience.css";
 
-function Education() {
+function Experience() {
     const [submit, setSubmit] = useState(false);
-    const [schoolName, setSchoolName] = useState("");
-    const [studyField, setStudyField] = useState("");
+    const [companyName, setCompanyName] = useState("");
+    const [title, setTitle] = useState("");
+    const [responsibilities, setResponsibilities] = useState("");
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
 
     if (submit) {
         return (
-            <div className="education">
-                <h1 className="education-header">Education Experience</h1>
-                <p>{schoolName}</p>
-                <p>{studyField}</p>
+            <div className="experience">
+                <h1 className="experience-header">Practical Experience</h1>
+                <p>{companyName}</p>
+                <p>{title}</p>
+                <p>{responsibilities}</p>
                 <p>
                     {startDate} - {endDate}
                 </p>
                 <button
                     onClick={() => {
                         setSubmit(false);
-                        setSchoolName(schoolName);
-                        setStudyField(studyField);
-                        setStartDate(startDate);
-                        setEndDate(endDate);
                     }}
                 >
                     Edit
@@ -32,8 +30,8 @@ function Education() {
         );
     }
     return (
-        <div className="education-form">
-            <h1 className="education-header">Education Experience</h1>
+        <div className="experience-info">
+            <h1 className="experience-header">Practical Experience</h1>
 
             <form
                 onSubmit={(e) => {
@@ -43,15 +41,20 @@ function Education() {
             >
                 <input
                     type="text"
-                    placeholder="School Name"
-                    onChange={(e) => setSchoolName(e.target.value)}
-                    value={schoolName}
+                    placeholder="Company Name"
+                    onChange={(e) => setCompanyName(e.target.value)}
+                    value={companyName}
                 />
                 <input
                     type="text"
-                    placeholder="Field of Study"
-                    onChange={(e) => setStudyField(e.target.value)}
-                    value={studyField}
+                    placeholder="Title"
+                    onChange={(e) => setTitle(e.target.value)}
+                    value={title}
+                />
+                <textarea
+                    placeholder="Responsibilities"
+                    onChange={(e) => setResponsibilities(e.target.value)}
+                    value={responsibilities}
                 />
                 <label>Start Date: </label>
                 <input
@@ -73,4 +76,4 @@ function Education() {
     );
 }
 
-export default Education;
+export default Experience;
