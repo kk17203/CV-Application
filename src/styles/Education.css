@@ -1,3 +1,10 @@
 .education-header {
     color: darkred;
 }
+
+.education-info,
+.education-form {
+    border: 3px solid darkred;
+    margin: 10px;
+    padding: 10px;
+}

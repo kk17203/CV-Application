@@ -10,7 +10,7 @@ function Education() {
 
     if (submit) {
         return (
-            <div className="education">
+            <div className="education-info">
                 <h1 className="education-header">Education Experience</h1>
                 <p>{schoolName}</p>
                 <p>{studyField}</p>

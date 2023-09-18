@@ -1,3 +1,10 @@
 .experience-header {
     color: darkgreen;
 }
+
+.experience-info,
+.experience-form {
+    border: 3px solid darkgreen;
+    margin: 10px;
+    padding: 10px;
+}

@@ -11,7 +11,7 @@ function Experience() {
 
     if (submit) {
         return (
-            <div className="experience">
+            <div className="experience-info">
                 <h1 className="experience-header">Practical Experience</h1>
                 <p>{companyName}</p>
                 <p>{title}</p>
@@ -30,7 +30,7 @@ function Experience() {
         );
     }
     return (
-        <div className="experience-info">
+        <div className="experience-form">
             <h1 className="experience-header">Practical Experience</h1>
 
             <form
