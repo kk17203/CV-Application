@@ -1,6 +1,6 @@
-# React + Vite
+# CV Application
 
-CV Application created as a part of "The Odin Project' curriculum.
+Project created as a part of "The Odin Project' curriculum.
 
 Currently, two official plugins are available:
 
