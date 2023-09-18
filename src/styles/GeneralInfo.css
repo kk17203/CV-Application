@@ -8,3 +8,17 @@
     margin: 10px;
     padding: 10px;
 }
+
+.general-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.general-form input {
+    margin: 5px;
+}
+
+.general-form button {
+    margin: 5px;
+    max-width: 60px;
+}

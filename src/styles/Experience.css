@@ -8,3 +8,17 @@
     margin: 10px;
     padding: 10px;
 }
+
+.experience-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-form input {
+    margin: 5px;
+}
+
+.experience-form button {
+    margin: 5px;
+    max-width: 60px;
+}
