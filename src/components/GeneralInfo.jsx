@@ -10,7 +10,7 @@ function GeneralInfo() {
     if (submit) {
         return (
             <div className="general-info">
-                <h1>General Info</h1>
+                <h1 className="general-header">General Info</h1>
                 <p>{fullName}</p>
                 <p>{email}</p>
                 <p>{phone}</p>
