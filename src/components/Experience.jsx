@@ -90,7 +90,7 @@ export default function Experience() {
 
     return (
         <div>
-            <h1 className="experience-header">Practical Experience</h1>
+            <h1 className="experience-header">Experience</h1>
             <button onClick={() => setIsFormOpen(!isFormOpen)}>
                 Add Experience
             </button>

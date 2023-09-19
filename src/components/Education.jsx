@@ -83,7 +83,7 @@ export default function Education() {
 
     return (
         <div>
-            <h1 className="experience-header">Education</h1>
+            <h1 className="education-header">Education</h1>
             <button onClick={() => setIsFormOpen(!isFormOpen)}>
                 Add Education
             </button>
