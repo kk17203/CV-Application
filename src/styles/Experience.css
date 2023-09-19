@@ -9,6 +9,11 @@
     padding: 10px;
 }
 
+.experience-form {
+    display: flex;
+    flex-direction: column;
+}
+
 .experience-form form {
     display: flex;
     flex-direction: column;

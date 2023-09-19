@@ -9,6 +9,11 @@
     padding: 10px;
 }
 
+.education-form {
+    display: flex;
+    flex-direction: column;
+}
+
 .education-form form {
     display: flex;
     flex-direction: column;
