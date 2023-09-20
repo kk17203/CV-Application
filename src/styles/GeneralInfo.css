@@ -5,8 +5,8 @@
 .general-info,
 .general-form {
     border: 3px solid darkblue;
-    margin: 10px;
     padding: 10px;
+    margin: 10px 0px;
 }
 
 .general-form form {

@@ -209,7 +209,7 @@ export default function Experience() {
                             </div>
                         ) : (
                             <div className="experience-info">
-                                <p>{experience.companyName}</p>
+                                <h3>{experience.companyName}</h3>
                                 <p>{experience.title}</p>
                                 <p>{experience.responsibilities}</p>
                                 <p>

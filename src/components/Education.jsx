@@ -184,7 +184,7 @@ export default function Education() {
                             </div>
                         ) : (
                             <div className="education-info">
-                                <p>{education.schoolName}</p>
+                                <h3>{education.schoolName}</h3>
                                 <p>{education.studyField}</p>
                                 <p>
                                     {education.startDate} - {education.endDate}
