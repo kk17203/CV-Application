@@ -2,7 +2,22 @@ import { useState } from "react";
 import "../styles/Education.css";
 import { v4 as uuid } from "uuid";
 
-const educationData = [];
+const educationData = [
+    {
+        id: uuid(),
+        schoolName: "Missouri State University",
+        studyField: "Computer Information Systems",
+        startDate: "2016-08-15",
+        endDate: "2020-05-15",
+    },
+    {
+        id: uuid(),
+        schoolName: "Bolivar High School",
+        studyField: "High School Diploma",
+        startDate: "2012-08-15",
+        endDate: "2016-05-15",
+    },
+];
 
 export default function Education() {
     const [schoolName, setSchoolName] = useState("");
@@ -82,11 +97,14 @@ export default function Education() {
     };
 
     return (
-        <div>
-            <h1 className="education-header">Education</h1>
-            <button onClick={() => setIsFormOpen(!isFormOpen)}>
-                Add Education
-            </button>
+        <>
+            <div className="education-header">
+                <h1>Education</h1>
+                <button onClick={() => setIsFormOpen(!isFormOpen)}>
+                    Add Education
+                </button>
+            </div>
+            <hr style={{ width: "100%", borderColor: "black" }} />
             {isFormOpen && (
                 <div className="education-form">
                     <form
@@ -125,7 +143,7 @@ export default function Education() {
             )}
             <div>
                 {educations.map((education) => (
-                    <div key={education.id}>
+                    <div key={education.id} className="test">
                         {education.isEditing ? (
                             <div className="education-form">
                                 <input
@@ -184,17 +202,23 @@ export default function Education() {
                             </div>
                         ) : (
                             <div className="education-info">
-                                <h3>{education.schoolName}</h3>
-                                <p>{education.studyField}</p>
-                                <p>
+                                <h3 className="school-name">
+                                    {education.schoolName}
+                                </h3>
+                                <p className="school-dates">
                                     {education.startDate} - {education.endDate}
                                 </p>
+                                <p className="study-field">
+                                    {education.studyField}
+                                </p>
                                 <button
+                                    className="education-edit-button"
                                     onClick={() => handleEdit(education.id)}
                                 >
                                     Edit
                                 </button>
                                 <button
+                                    className="education-delete-button"
                                     onClick={() => handleDelete(education.id)}
                                 >
                                     Delete
@@ -204,6 +228,6 @@ export default function Education() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }

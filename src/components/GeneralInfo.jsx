@@ -3,30 +3,35 @@ import "../styles/GeneralInfo.css";
 
 function GeneralInfo() {
     const [submit, setSubmit] = useState(false);
-    const [fullName, setFullName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
+    const [fullName, setFullName] = useState("Kevin Kelly");
+    const [email, setEmail] = useState("kk17203@gmail.com");
+    const [phone, setPhone] = useState("417.399.7865");
 
     return (
-        <div>
-            <h1 className="general-header">General Info</h1>
+        <>
+            {/* <h1 className="general-header">General Info</h1> */}
             {submit ? (
-                <div>
-                    <div className="general-info">
-                        <p>{fullName}</p>
-                        <p>{email}</p>
-                        <p>{phone}</p>
-                        <button
-                            onClick={() => {
-                                setSubmit(false);
-                                setFullName(fullName);
-                                setEmail(email);
-                                setPhone(phone);
-                            }}
-                        >
-                            Edit
-                        </button>
-                    </div>
+                <div className="general-info">
+                    <h1 className="name">{fullName}</h1>
+                    <p className="email-info">
+                        <span className="email-label">Email: </span>
+                        <span className="email-content">{email}</span>
+                    </p>
+                    <p className="phone">
+                        <span className="phone-label">Phone: </span>
+                        <span className="phone-content">{phone}</span>
+                    </p>
+                    <button
+                        className="edit-button"
+                        onClick={() => {
+                            setSubmit(false);
+                            setFullName(fullName);
+                            setEmail(email);
+                            setPhone(phone);
+                        }}
+                    >
+                        Edit
+                    </button>
                 </div>
             ) : (
                 <div className="general-form">
@@ -58,7 +63,7 @@ function GeneralInfo() {
                     </form>
                 </div>
             )}
-        </div>
+        </>
     );
 }
 

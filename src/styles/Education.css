@@ -1,12 +1,80 @@
 .education-header {
-    color: darkred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-header h1 {
+    margin: 0px 10px;
+}
+
+.education-header button {
+    margin: 0 10px;
+    background: hsla(0, 0%, 0%, 0.027);
+    border: 1px solid hsl(0, 0%, 0%, 0.425);
+    color: hsla(0, 0%, 0%, 0.425);
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+}
+
+.education-header button:hover {
+    background: hsla(0, 0%, 0%, 0.1);
+    border: 1px solid hsl(0, 0%, 0%, 0.425);
+    color: hsla(0, 0%, 0%, 0.425);
+}
+
+.education-header button:active {
+    background: hsla(0, 0%, 0%, 0.2);
+    border: 1px solid hsl(0, 0%, 0%, 0.425);
+    color: hsla(0, 0%, 0%, 0.425);
 }
 
 .education-info,
 .education-form {
-    border: 3px solid darkred;
     margin: 10px 0px;
     padding: 10px;
+}
+
+.education-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    /* margin: 0; */
+}
+
+.school-name {
+    margin: 0.3em 0;
+}
+
+.school-dates {
+    font-size: 0.9rem;
+    text-align: right;
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+
+.study-field {
+    grid-column: 1 / 3;
+    margin: 0.1em 0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.education-edit-button {
+    margin: 5px;
+    max-width: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+}
+
+.education-delete-button {
+    margin: 5px;
+    max-width: 60px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .education-form {

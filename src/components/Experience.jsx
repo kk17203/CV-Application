@@ -2,7 +2,24 @@ import { useState } from "react";
 import "../styles/Experience.css";
 import { v4 as uuid } from "uuid";
 
-const experiencesData = [];
+const experiencesData = [
+    {
+        id: uuid(),
+        companyName: "O'Reilly Auto Parts",
+        title: "Software Engineer",
+        responsibilities: "Worked on the O'Reilly Auto Parts website",
+        startDate: "2020-06-01",
+        endDate: "2021-06-01",
+    },
+    {
+        id: uuid(),
+        companyName: "FaceBook",
+        title: "Software Engineer",
+        responsibilities: "Worked on the Facebook website",
+        startDate: "2021-06-01",
+        endDate: "2022-06-01",
+    },
+];
 
 export default function Experience() {
     const [companyName, setCompanyName] = useState("");
@@ -89,11 +106,14 @@ export default function Experience() {
     };
 
     return (
-        <div>
-            <h1 className="experience-header">Experience</h1>
-            <button onClick={() => setIsFormOpen(!isFormOpen)}>
-                Add Experience
-            </button>
+        <>
+            <div className="experience-header">
+                <h1>Experience</h1>
+                <button onClick={() => setIsFormOpen(!isFormOpen)}>
+                    Add Experience
+                </button>
+            </div>
+            <hr style={{ width: "100%", borderColor: "black" }} />
             {isFormOpen && (
                 <div className="experience-form">
                     <form
@@ -209,19 +229,27 @@ export default function Experience() {
                             </div>
                         ) : (
                             <div className="experience-info">
-                                <h3>{experience.companyName}</h3>
-                                <p>{experience.title}</p>
-                                <p>{experience.responsibilities}</p>
-                                <p>
+                                <h3 className="company-name">
+                                    {experience.companyName}
+                                </h3>
+                                <p className="company-title">
+                                    {experience.title}
+                                </p>
+                                <p className="company-resp">
+                                    {experience.responsibilities}
+                                </p>
+                                <p className="company-dates">
                                     {experience.startDate} -{" "}
                                     {experience.endDate}
                                 </p>
                                 <button
+                                    className="experience-edit-button"
                                     onClick={() => handleEdit(experience.id)}
                                 >
                                     Edit
                                 </button>
                                 <button
+                                    className="experience-delete-button"
                                     onClick={() => handleDelete(experience.id)}
                                 >
                                     Delete
@@ -231,6 +259,6 @@ export default function Experience() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }
