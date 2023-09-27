@@ -30,7 +30,7 @@ function GeneralInfo() {
                             setPhone(phone);
                         }}
                     >
-                        Edit
+                        Edit <br /> General Info
                     </button>
                 </div>
             ) : (
