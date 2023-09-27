@@ -5,19 +5,21 @@ import { v4 as uuid } from "uuid";
 const experiencesData = [
     {
         id: uuid(),
-        companyName: "O'Reilly Auto Parts",
-        title: "Software Engineer",
-        responsibilities: "Worked on the O'Reilly Auto Parts website",
-        startDate: "2020-06-01",
-        endDate: "2021-06-01",
+        companyName: "DOT Foods",
+        title: "OTR Truck Driver",
+        responsibilities:
+            "Collaborate effectively with warehouse staff and customers to facilitate loading and unloading of cargo, demonstrating excellent communication and teamwork skills to ensure timely and accurate deliveries",
+        startDate: "2019-07-01",
+        endDate: "Present",
     },
     {
         id: uuid(),
-        companyName: "FaceBook",
-        title: "Software Engineer",
-        responsibilities: "Worked on the Facebook website",
-        startDate: "2021-06-01",
-        endDate: "2022-06-01",
+        companyName: "TruGreen",
+        title: "Lawn Care Specialist",
+        responsibilities:
+            "Utilized problem-solving abilities to diagnose and address lawn issues, recommending tailored solutions to clients, demonstrating analytical and critical thinking skills",
+        startDate: "2017-04-01",
+        endDate: "2019-07-01",
     },
 ];
 

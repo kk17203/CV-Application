@@ -7,15 +7,15 @@ const educationData = [
         id: uuid(),
         schoolName: "Missouri State University",
         studyField: "Computer Information Systems",
-        startDate: "2016-08-15",
-        endDate: "2020-05-15",
+        startDate: "2008-08-15",
+        endDate: "2012-05-15",
     },
     {
         id: uuid(),
         schoolName: "Bolivar High School",
         studyField: "High School Diploma",
-        startDate: "2012-08-15",
-        endDate: "2016-05-15",
+        startDate: "2004-08-15",
+        endDate: "2008-05-15",
     },
 ];
 

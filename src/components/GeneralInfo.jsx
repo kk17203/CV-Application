@@ -2,14 +2,13 @@ import { useState } from "react";
 import "../styles/GeneralInfo.css";
 
 function GeneralInfo() {
-    const [submit, setSubmit] = useState(false);
+    const [submit, setSubmit] = useState(true);
     const [fullName, setFullName] = useState("Kevin Kelly");
     const [email, setEmail] = useState("kk17203@gmail.com");
     const [phone, setPhone] = useState("417.399.7865");
 
     return (
         <>
-            {/* <h1 className="general-header">General Info</h1> */}
             {submit ? (
                 <div className="general-info">
                     <h1 className="name">{fullName}</h1>
