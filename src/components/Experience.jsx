@@ -237,9 +237,9 @@ export default function Experience() {
                                 <p className="company-title">
                                     {experience.title}
                                 </p>
-                                <p className="company-resp">
-                                    {experience.responsibilities}
-                                </p>
+                                <ul className="company-resp">
+                                    <li>{experience.responsibilities}</li>
+                                </ul>
                                 <p className="company-dates">
                                     {experience.startDate} -{" "}
                                     {experience.endDate}
