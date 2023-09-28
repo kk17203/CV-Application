@@ -6,9 +6,10 @@ body {
 
 #root {
     width: 800px;
+    height: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     border: solid 1px black;
     padding: 1rem;
 }
